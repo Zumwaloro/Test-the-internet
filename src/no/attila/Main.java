@@ -3,6 +3,10 @@ package no.attila;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        MainPOM main = new MainPOM();
+
+        main.getWebPage("http://the-internet.herokuapp.com/");
+
     }
 }
