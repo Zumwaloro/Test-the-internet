@@ -1,5 +1,6 @@
 package no.attila;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -90,6 +91,9 @@ public class Tests {
 
     public void selectAndClickContextMenu(String id) {
         actions.contextClick(driver.findElement(By.id(id))).perform();
+        wait.until(ExpectedConditions.alertIsPresent());
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
     }
 
     public void dragAndDropElement(String idSource, String idTarget) {
