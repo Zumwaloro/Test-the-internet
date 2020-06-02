@@ -1,124 +1,118 @@
 package no.attila;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.List;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class MainPOM {
 
-    private final DriverSetUp setup = new DriverSetUp();
-    private final WebDriver driver = setup.getDrvier();
-    private final Actions actions = new Actions(driver);
+    public static Tests tests;
 
-    public void getWebPage(String url) {
-        driver.get(url);
+    //-------------------------------- set up test environment --------------------------------//
+    @BeforeClass
+    public static void setup() {
+        tests = new Tests();
+        tests.getWebPage("http://the-internet.herokuapp.com/");
     }
 
-    public void getAndClickButtonByLinkText(String text) {
-        WebElement button = ((ChromeDriver) driver).findElementByLinkText(text);
-        button.click();
+    @AfterClass
+    public static void tearDown() {
+        tests.closeWebPage();
     }
 
+    @After
     public void navigateBack() {
-        driver.navigate().back();
+        tests.navigateBack();
     }
 
-    public void testAddAndRemoveButton(String addPath, String removePath) {
-        WebElement add = driver.findElement(By.xpath(addPath));
-        add.click();
-        WebElement remove = driver.findElement(By.xpath(removePath));
-        remove.click();
+    //-------------------------------- tests --------------------------------//
+
+    @Test
+    public void ABTest() {
+        tests.getAndClickButtonByLinkText("A/B Testing");
     }
 
-    public void testBrokenImages() {
-        List<WebElement> images = driver.findElements(By.tagName("img"));
-        for (WebElement e : images) {
-            try {
-                URL url = new URL(e.getAttribute("src"));
-                HttpURLConnection http = (HttpURLConnection)url.openConnection();
-                if (http.getResponseCode() != 200) {
-                    System.out.println("Invalid image with src: " + e.getAttribute("src"));
-                } else {
-                    System.out.println("Valid image with source: " + e.getAttribute("src"));
-                }
-            } catch (Exception ex) {
-                System.out.println(ex);
-            }
-        }
+    @Test
+    public void addOrRemoveElement() {
+        tests.getAndClickButtonByLinkText("Add/Remove Elements");
+        tests.testAddAndRemoveButton("/html/body/div[2]/div/div/button","/html/body/div[2]/div/div/div/button");
     }
 
-    public void getElementByClass(String className) {
-        WebElement button = driver.findElement(By.className(className));
-        button.click();
+    @Test
+    public void basicAuth() {
+        tests.getWebPage("http://admin:admin@the-internet.herokuapp.com/basic_auth");
     }
 
-    public void getElementByMultipleClassName(String multiClass) {
-        driver.findElement(By.cssSelector(multiClass)).click();
+    @Test
+    public void brokenImages() {
+        tests.getAndClickButtonByLinkText("Broken Images");
+        tests.testBrokenImages();
     }
 
-    public void printTableRowElements(String rowPath) {
-        List<WebElement> tableElements = driver.findElement(By.xpath(rowPath)).findElements(By.tagName("td"));
-        for (WebElement e : tableElements) {
-            System.out.println(e.getText());
-        }
+    @Test
+    public void challengingDOM() {
+        tests.getAndClickButtonByLinkText("Challenging DOM");
+        tests.getElementByClass("button");
+        tests.getElementByMultipleClassName(".button.alert");
+        tests.getElementByMultipleClassName(".button.success");
+        tests.printTableRowElements("/html/body/div[2]/div/div/div/div/div[2]/table/tbody/tr[1]");
+        tests.clickEditeAndDeleteInRow("/html/body/div[2]/div/div/div/div/div[2]/table/tbody/tr[1]/td[7]/a[1]",
+                                    "/html/body/div[2]/div/div/div/div/div[2]/table/tbody/tr[1]/td[7]/a[2]");
     }
 
-    public void clickEditeAndDeleteInRow(String edit, String delete) {
-        driver.findElement(By.xpath(edit)).click();
-        driver.findElement(By.xpath(delete)).click();
+    @Test
+    public void checkBoxes() {
+        tests.getAndClickButtonByLinkText("Checkboxes");
+        tests.getAndClickCheckBoxes("//*[@id=\"checkboxes\"]");
     }
 
-    public void getAndClickCheckBoxes(String containerPath) {
-        List<WebElement> elements = driver.findElement(By.xpath(containerPath)).findElements(By.tagName("input"));
-        elements.get(0).click();
-        elements.get(1).click();
+    @Test
+    public void contextMenu() {
+        tests.getAndClickButtonByLinkText("Context Menu");
+        tests.selectAndClickContextMenu("hot-spot");
     }
 
-    public void selectAndClickContextMenu(String id) {
-        actions.contextClick(driver.findElement(By.id(id))).perform();
+    @Test
+    public void dragAndDrop() {
+        tests.getAndClickButtonByLinkText("Drag and Drop");
+        tests.dragAndDropElement("column-a", "column-b");
     }
 
-    public void dragAndDropElement(String idSource, String idTarget) {
-        WebElement source = driver.findElement(By.xpath(idSource));
-        WebElement target = driver.findElement(By.id(idTarget));
-        actions.dragAndDrop(source, target).build().perform();
+    @Test
+    public void dropdown() {
+        tests.getAndClickButtonByLinkText("Dropdown");
+        tests.selectDropdownMenu("dropdown");
     }
 
-    public void selectDropdownMenu(String id) {
-        Select menu = new Select(driver.findElement(By.id(id)));
-        menu.selectByVisibleText("Option 1");
-        menu.selectByVisibleText("Option 2");
+    @Test
+    public void dynamicControls() {
+        tests.getAndClickButtonByLinkText("Dynamic Controls");
+        tests.testDynamicControls();
     }
 
-    public void testDynamicControls() {
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        //Checkbox
-        WebElement checkBox = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/form[1]/div/input"));
-        WebElement button = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/form[1]/button"));
-        checkBox.click();
-        button.click();
-        wait.until(ExpectedConditions.elementToBeClickable(button));
-        button.click();
-        wait.until(ExpectedConditions.elementToBeClickable(button));
-        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/form[1]/div/input")).click();
-
-        //Input box
-        WebElement enableButton = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/form[2]/button\n"));
-        WebElement input = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/form[2]/input\n"));
-        enableButton.click();
-        wait.until(ExpectedConditions.elementToBeClickable(input));
-        input.sendKeys("Hello world!");
-        enableButton.click();
+    @Test
+    public void entryAd() {
+        tests.getAndClickButtonByLinkText("Entry Ad");
+        tests.closeModalWindow();
     }
 
+    @Test
+    public void download() {
+        tests.getAndClickButtonByLinkText("File Download");
+        tests.getAndClickButtonByLinkText("atlc1.jpg");
+    }
+
+    @Test
+    public void hovers() {
+        tests.getAndClickButtonByLinkText("Hovers");
+        tests.hoverOverElements();
+    }
+
+    @Test
+    public void horizontalSlider() {
+        tests.getAndClickButtonByLinkText("Horizontal Slider");
+        tests.dragHorizontalSlider();
+    }
 
 }
