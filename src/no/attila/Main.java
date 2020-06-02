@@ -57,6 +57,10 @@ public class Main {
         main.selectDropdownMenu("dropdown");
         main.navigateBack();*/
 
+        //Dynamic Controls
+        main.getAndClickButtonByLinkText("Dynamic Controls");
+        main.testDynamicControls();
+
 
     }
 }

@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -95,6 +97,27 @@ public class MainPOM {
         Select menu = new Select(driver.findElement(By.id(id)));
         menu.selectByVisibleText("Option 1");
         menu.selectByVisibleText("Option 2");
+    }
+
+    public void testDynamicControls() {
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        //Checkbox
+        WebElement checkBox = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/form[1]/div/input"));
+        WebElement button = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/form[1]/button"));
+        checkBox.click();
+        button.click();
+        wait.until(ExpectedConditions.elementToBeClickable(button));
+        button.click();
+        wait.until(ExpectedConditions.elementToBeClickable(button));
+        driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/form[1]/div/input")).click();
+
+        //Input box
+        WebElement enableButton = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/form[2]/button\n"));
+        WebElement input = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/form[2]/input\n"));
+        enableButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(input));
+        input.sendKeys("Hello world!");
+        enableButton.click();
     }
 
 
