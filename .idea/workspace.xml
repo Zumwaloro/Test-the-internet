@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d65792ca-0cbe-48a4-81e5-a2931fe2b76b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test-the-internet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Test-the-internet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test-the-internet/no/attila/MainPOM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Test-the-internet/no/attila/MainPOM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Test-the-internet/no/attila/Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Test-the-internet/no/attila/Tests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/no/attila/MainPOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/attila/MainPOM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/attila/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/attila/Tests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -13,13 +17,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Test_the_internet$MainPOM.ic" NAME="MainPOM Coverage Results" MODIFIED="1591103556189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Test_the_internet$MainPOM.ic" NAME="MainPOM Coverage Results" MODIFIED="1591119443637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>no.attila.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Test_the_internet$Main.ic" NAME="Main Coverage Results" MODIFIED="1591103386275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="220" />
+    <option name="myElementSize" value="224" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1990855508">
@@ -32,22 +36,24 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="java" value="5580" />
+          <entry key="java" value="5715" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5580" />
+          <entry key="JAVA" value="5715" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="2" />
           <entry key="java" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="2" />
           <entry key="JAVA" value="8" />
         </counts>
       </usages-collector>
@@ -59,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/src/no/attila/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
               <folding>
                 <element signature="e#84#85#0" expanded="true" />
                 <element signature="e#136#137#0" expanded="true" />
@@ -68,23 +74,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/no/attila/MainPOM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+            <state relative-caret-position="221">
+              <caret line="65" selection-start-line="65" selection-end-line="65" selection-end-column="29" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#718#719#0" expanded="true" />
+                <element signature="e#782#783#0" expanded="true" />
+                <element signature="e#1058#1059#0" expanded="true" />
+                <element signature="e#1150#1151#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/no/attila/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+            <state relative-caret-position="286">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#830#831#0" expanded="true" />
@@ -103,6 +112,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>column-a</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -111,8 +125,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/no/attila/DriverSetUp.java" />
         <option value="$PROJECT_DIR$/src/no/attila/Main.java" />
-        <option value="$PROJECT_DIR$/src/no/attila/MainPOM.java" />
         <option value="$PROJECT_DIR$/src/no/attila/Tests.java" />
+        <option value="$PROJECT_DIR$/src/no/attila/MainPOM.java" />
       </list>
     </option>
   </component>
@@ -154,6 +168,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="attila" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Test-the-internet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -169,9 +187,9 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591117240437" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591120197786" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../selenium-java-3.141.59/libs/okio-1.14.0.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29655173" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
@@ -234,23 +252,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590949305374</updated>
-      <workItem from="1590949310338" duration="27372000" />
+      <workItem from="1590949310338" duration="30236000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainPOM - 2020.06.02 at 15h 11m 12s.xml">
+    <history-entry file="MainPOM - 2020.06.02 at 19h 05m 19s.xml">
       <configuration name="MainPOM" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainPOM - 2020.06.02 at 15h 12m 55s.xml">
+    <history-entry file="MainPOM - 2020.06.02 at 19h 08m 37s.xml">
       <configuration name="MainPOM" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MainPOM - 2020.06.02 at 15h 18m 31s.xml">
+    <history-entry file="MainPOM - 2020.06.02 at 19h 10m 41s.xml">
+      <configuration name="MainPOM" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainPOM - 2020.06.02 at 19h 11m 03s.xml">
+      <configuration name="MainPOM" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainPOM - 2020.06.02 at 19h 11m 28s.xml">
+      <configuration name="MainPOM" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainPOM - 2020.06.02 at 19h 12m 45s.xml">
+      <configuration name="MainPOM" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainPOM - 2020.06.02 at 19h 18m 01s.xml">
+      <configuration name="MainPOM" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainPOM - 2020.06.02 at 19h 36m 38s.xml">
+      <configuration name="MainPOM" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainPOM - 2020.06.02 at 19h 38m 05s.xml">
+      <configuration name="MainPOM" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainPOM - 2020.06.02 at 19h 45m 11s.xml">
       <configuration name="MainPOM" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27372000" />
+    <option name="totallyTimeSpent" value="30236000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -269,8 +308,8 @@
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.26246333" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.3431085" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.398827" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32991204" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -293,6 +332,24 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/no/attila/MainPOM.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/no/attila/MainPOM.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/no/attila/DriverSetUp.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -309,7 +366,7 @@
     <entry file="file://$PROJECT_DIR$/src/no/attila/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           <folding>
             <element signature="e#84#85#0" expanded="true" />
             <element signature="e#136#137#0" expanded="true" />
@@ -317,24 +374,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/no/attila/MainPOM.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.7.0-M1/junit-platform-commons-1.7.0-M1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="111">
+          <caret line="363" selection-start-line="363" selection-end-line="363" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/no/attila/Tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+        <state relative-caret-position="286">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#830#831#0" expanded="true" />
             <element signature="e#859#860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/no/attila/MainPOM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="65" selection-start-line="65" selection-end-line="65" selection-end-column="29" />
+          <folding>
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -395,8 +462,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
-                <option value="0.6" />
+                <option value="0.29655173" />
               </list>
             </option>
           </splitter-proportions>

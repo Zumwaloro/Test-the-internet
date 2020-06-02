@@ -97,7 +97,7 @@ public class Tests {
     }
 
     public void dragAndDropElement(String idSource, String idTarget) {
-        WebElement source = driver.findElement(By.xpath(idSource));
+        WebElement source = driver.findElement(By.id(idSource));
         WebElement target = driver.findElement(By.id(idTarget));
         actions.dragAndDrop(source, target).build().perform();
     }
